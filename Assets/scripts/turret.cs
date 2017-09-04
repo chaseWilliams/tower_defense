@@ -13,12 +13,10 @@ public class turret : MonoBehaviour {
 	public float fire_rate;
 	public float range;
 	public float rotate_speed;
-
-
+    public GameObject bulletPrefab;
+    public Transform fire_point;
 
 	private float shooting_countdown = 0f;
-
-
 
 	// Use this for initialization
 	void Start () {
@@ -65,7 +63,11 @@ public class turret : MonoBehaviour {
 	}
 
 	void Shoot() {
-		Debug.Log ("Shoot!");
+        GameObject bullet_obj = (GameObject)Instantiate(bulletPrefab, fire_point.position, fire_point.rotation);
+        bullet bullet_script = bullet_obj.GetComponent< bullet > ();
+
+        if (bullet_script != null)
+            bullet_script.Seek(target);
 	}
 
 	void OnDrawGizmosSelected () {

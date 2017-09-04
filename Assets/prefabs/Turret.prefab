@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1860519748169010}
   m_IsPrefabParent: 1
+--- !u!1 &1145448543872644
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4441517948627348}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1464114927063826
 GameObject:
   m_ObjectHideFlags: 1
@@ -83,13 +98,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1860519748169010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.51, y: 0.5, z: -13.82}
+  m_LocalPosition: {x: 0.13123989, y: 0.5, z: -13.80392}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4686559599609472}
   - {fileID: 4511139122935492}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4441517948627348
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1145448543872644}
+  m_LocalRotation: {x: 0.0000001490116, y: 0.00000008940695, z: -0.7071068, w: -0.7071068}
+  m_LocalPosition: {x: 0, y: 0.173, z: 0.841}
+  m_LocalScale: {x: 0.04413969, y: 0.0441397, z: 0.0441397}
+  m_Children: []
+  m_Father: {fileID: 4686559599609472}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4511139122935492
 Transform:
@@ -115,6 +143,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4872413021390898}
+  - {fileID: 4441517948627348}
   m_Father: {fileID: 4023303853625084}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -224,6 +253,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 15
-  part_to_rotate: {fileID: 4686559599609472}
   enemyTag: Enemy
+  part_to_rotate: {fileID: 4686559599609472}
+  fire_rate: 1
+  range: 15
+  rotate_speed: 10
+  bulletPrefab: {fileID: 1618654150407758, guid: 92f5db1e17c20421fa7e4afa90d91774,
+    type: 2}
+  fire_point: {fileID: 4441517948627348}
